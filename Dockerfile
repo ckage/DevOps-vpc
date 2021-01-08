@@ -3,6 +3,6 @@ COPY app.js .
 COPY package.json .
 RUN npm install &&\
     apt-get update &&\
-    apk-get upgrade
+    apt-get upgrade
 EXPOSE  31000
 CMD node app.js
