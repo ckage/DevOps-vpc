@@ -1,8 +1,8 @@
-FROM node:13.5.0
+FROM node:9.4.0-alpine
 COPY app.js .
 COPY package.json .
 RUN npm install &&\
-    apt-get update &&\
-    apt-get upgrade
-EXPOSE  31000
+    apk update &&\
+    apk upgrade
+EXPOSE  8080
 CMD node app.js
