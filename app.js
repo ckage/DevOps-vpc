@@ -4,8 +4,8 @@ var hostname = os.hostname();
 var app = express()
 
 app.get('/', function(req, res) {
-  res.send('Hello world from ' + hostname + '! Your app is up and running in a cluster!\n')
+  res.send('The value of PORT is:', process.env.game.properties)
 })
 app.listen(8080, function() {
-  console.log('Sample app is listening on port 8080.')
+  console.log(process.env);
 })
